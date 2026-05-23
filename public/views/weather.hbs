@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        body {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.45),
+                    rgba(0, 0, 0, 0.55)), url("../images/weather-bg.png");
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Weather App</h1>
+        <form id="weather-form">
+            <div> <label for="city">City Name</label> <input type="text" id="city" name="city"
+                    placeholder="Enter city name"> </div>
+            <p>or</p>
+            <div class="form-group">
+                <div> <label for="lat">Latitude</label> <input type="text" id="lat" name="lat"
+                        placeholder="Enter latitude"> </div>
+                <div> <label for="lon">Longitude</label> <input type="text" id="lon" name="lon"
+                        placeholder="Enter longitude"> </div>
+            </div> <button type="submit"> <i class="fa-solid fa-cloud-sun"></i> Get Weather </button>
+        </form>
+        <div class="weather-result hidden" id="weather-result">
+            <h2>Weather Result</h2>
+            <div class="weather-info">
+                <p> <span><i class="fa-solid fa-flag"></i> Country</span> <span id="result-country"></span> </p>
+                <p> <span><i class="fa-solid fa-city"></i> City</span> <span id="result-city"></span> </p>
+                <p> <span><i class="fa-solid fa-cloud-sun"></i> Forecast</span> <span id="result-forecast"></span> </p>
+                <p> <span><i class="fa-solid fa-temperature-high"></i> Temperature</span> <span id="result-temp"></span>
+                </p>
+                <p> <span><i class="fa-solid fa-map-marker-alt"></i> Location</span> <span id="result-location"></span>
+                </p>
+                <button type="button" id="back-btn"> <i class="fa-solid fa-arrow-left"></i> Back </button>
+            </div>
+        </div>
+    </div>
+    <div class="toast" id="toast">
+
+        <button id="toast-close">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <span id="toast-icon"></span>
+
+        <span id="toast-message"></span>
+
+    </div>
+    <script src="../js/script.js"></script>
+</body>
+
+</html>
